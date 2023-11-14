@@ -1,5 +1,6 @@
 import About from "@/components/about";
 import Profile from "@/components/profile";
+import Projects from "@/components/projects";
 import Spacer from "@/components/spacer";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Profile />
       <Spacer />
       <About />
+      <Projects />
     </main>
   );
 }
