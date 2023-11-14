@@ -7,18 +7,18 @@ import React, { useEffect } from "react";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/active-section-context";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Profile() {
-  const { ref, inView } = useInView({ threshold: 0.5 });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+  const { ref } = useSectionInView("Home", 0.5);
+  //   const { ref, inView } = useInView({ threshold: 0.5 });
+  //   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Home");
-    }
-  }, [inView, setActiveSection]);
+  //   useEffect(() => {
+  //     if (inView && Date.now() - timeOfLastClick > 1000) {
+  //       setActiveSection("Home");
+  //     }
+  //   }, [inView, setActiveSection]);
 
   return (
     <motion.section
