@@ -1,2 +1,3 @@
 as const - allows more precision in links[]
 using <section> instead of <div> to add more semantic meaning as they are all linked to eachother
+react- context API

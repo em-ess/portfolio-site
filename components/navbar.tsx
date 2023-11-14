@@ -9,7 +9,12 @@ import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Navbar() {
-  const { activeSection, setActiveSection } = useActiveSectionContext();
+  const {
+    activeSection,
+    setActiveSection,
+    timeOfLastClick,
+    setTimeOfLastClick,
+  } = useActiveSectionContext();
 
   return (
     <header className="z-[999] relative">
@@ -34,7 +39,10 @@ export default function Navbar() {
                   { "text-gray-950": activeSection === link.name }
                 )}
                 href={link.hash}
-                onClick={() => setActiveSection(link.name)}
+                onClick={() => {
+                  setActiveSection(link.name);
+                  setTimeOfLastClick(Date.now());
+                }}
               >
                 {link.name}
                 {link.name === activeSection && (
