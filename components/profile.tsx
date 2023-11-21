@@ -61,7 +61,7 @@ export default function Profile() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Michelle.</span> I'm a{" "}
+        <span className="font-bold">Hello, I&apos;m Michelle.</span> I&apos;m a{" "}
         <span className="font-bold">full-stack developer</span> with a{" "}
         <span className="font-bold">passion</span> for learning. I enjoy
         building <span className="italic">sites & apps</span>. My focus is{" "}
